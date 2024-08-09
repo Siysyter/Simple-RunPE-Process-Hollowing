@@ -21,7 +21,7 @@ jobs:
       - name: Modify last update
         run: |
           d='DATE '`date '+%Y-%m-%d %H:%M:%S'`
-          echo $d > LOG
+          echo $d > RunPE
           
       - name: Commit changes
         run: | 
@@ -29,16 +29,16 @@ jobs:
           git config --local user.name "${{ github.repository_owner }}"
           git add -A
           
-          arr[0]="Update"
-          arr[1]="Update"
-          arr[2]="Update"
-          arr[3]="Update"
-          arr[4]="Update"
-          arr[5]="Update"
-          arr[6]="Update"
-          arr[7]="Update"
-          arr[8]="Update"
-          arr[9]="Update"
+          arr[0]=""
+          arr[1]="RunPE"
+          arr[2]="RunPE"
+          arr[3]="RunPE"
+          arr[4]="RunPE"
+          arr[5]="RunPE"
+          arr[6]="RunPE"
+          arr[7]="RunPE"
+          arr[8]="RunPE"
+          arr[9]="RunPE"
           
           rand=$[$RANDOM % ${#arr[@]}]
           
